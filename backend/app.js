@@ -6,8 +6,8 @@ const { sequelize } = require('./models/index')
 
 
 
-// app.use(express.urlencoded({ extended: true}));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
 
 app.use('/todos', todoRouter);

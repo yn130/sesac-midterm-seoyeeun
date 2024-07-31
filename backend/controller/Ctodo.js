@@ -2,7 +2,7 @@ const { todo } = require('../models/index');
 // const { Op } = require('sequelize');
 
 // 추가
-exports.add = async(req,res) => {
+exports.add = async(req, res) => {
     try {
         console.log(req.body)
         const { title, done } = req.body;
@@ -20,7 +20,7 @@ exports.add = async(req,res) => {
 
 
 // 전체 조회
-exports.getTodo = async(req,res) => {
+exports.getTodo = async(req, res) => {
     try {
         const todos = await todo.findAll();
         res.json(todos);
@@ -38,9 +38,9 @@ exports.findId = async(req,res) => {
     try { 
         const { id } = req.params;
 
-        // select * from player where player_id = 1
+       
         const todo = await todo.findOne({
-            where: { tid }
+            where: { id }
         });
 
         res.json(todo); 
@@ -56,10 +56,10 @@ exports.edit = async(req,res) => {
     try {
         const { id } = req.params;
 
-        // UPDATE `Player` SET `team_id`=?,`updatedAt`=? WHERE `player_id` = ?
+        
         const updatedTodo = await todo.update(
-            { done }, // 무엇을 바꾸는데?
-            { where: { id }} // 누구를 바꿔야하는데?
+            { done }, 
+            { where: { id }} 
         );
 
         res.json(updatedTodo);
