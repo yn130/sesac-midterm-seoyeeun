@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서예은</title>
     <link rel="stylesheet" href="./public/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./public/index.js"></script>
 </head>
 <body>
@@ -14,15 +14,27 @@
         Todo List
     </header>
     <main>
-        <form id="todo-form">
-            <input type="text" placeholder="today's todo" class="input">
-            <button type="submit"> 작성 </button>
+        <article class="form-container">
+            <form id="todo-form">
+                <input type="text" placeholder="today's todo" class="input">
+                <button type="submit"> 작성 </button>
+            </from>
+        </article>
         </from>
         <div class="todolist-container" >
             <ul id="todo-list">
                 <li>
                     <input type="checkbox" name="todos">
                 </li>
+                <!-- <% todos.forEach(todo => { %>
+                    <li class="todo">
+                        <%= todos._todos_contents %>
+                        <button class="todo_delete_btn" type="button" onclick="deleteComment(<%= todo.todo_id %>);">X</button>
+                    </li>
+                <% }) %> -->
+
+
+
             </ul>
         </div>
     </main>
