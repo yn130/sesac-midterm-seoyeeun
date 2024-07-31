@@ -44,27 +44,49 @@ button {
     color: green;
 }
 
+li {
+    list-style-type: none;
+}
+
+.todo_delete_btn {
+    height: 20px;
+    background-color: green;
+    color: white;
+}
+
 
 
 @media screen and (max-width: 960px){
     body {
         width: 800px;
     }
+
+    li {
+        display: flex;
+        width: 100px;
+        justify-content: space-around;
+    }
+    .todo_delete_btn {
+        height: 20px;
+        background-color: green;
+        color: white;
+    }
 }
 
 
-/* 
-@media screen and (min-width: 765px) and (max-width: 920px){
 
-    .header {
-        height: 150px;
+@media screen and (min-width:540px) and (max-width: 960px){
+    body {
+        width: 800px;
     }
 
-    .main {
-        flex-direction: column;
+    li {
+        display: flex;
+        width: 100px;
+        justify-content: space-around;
     }
-
-    .aside {
-        display: none;
+    .todo_delete_btn {
+        height: 20px;
+        background-color: green;
+        color: white;
     }
-} */

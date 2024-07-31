@@ -17,11 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
             dataType:"json",
           })
             .then(function (response) {
-              response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+            //   response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+
+             $.each(data , function(i){
+                const li = document.createElement('li');
+                li.classNAme = 'todos';
+                li.innerHTML = `
+                ${ttodos._todos_contents}
+                <button type="button" onclick="deletetodo(${todo.todo_id});">삭제</button>
+            `;
+            commentList.appendChild(li);
+
+
             });
 
-
-    }
+        
+    })
 })
 
 
