@@ -3,8 +3,8 @@
 
 ### Todo 추가 (case1. 요청 본문에 title, done 필드 모두 작성하는 경우)
 POST {{server}}/todos
-Content-Type: application/json; charset=UTF-8
 
+Content-Type: application/json; charset=UTF-8
 {
   "title": "책 읽기",
   "done": false

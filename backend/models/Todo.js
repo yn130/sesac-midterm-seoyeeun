@@ -11,9 +11,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         done: {
-            type: Sequelize.BOOLEAN,
+            type: DataTypes.BOOLEAN,
             allowNull: false,
-            defaultValue: "false"
+            // defaultValue: sequelize.literal('now()'),
+            defaultValue: false,
 
         }
     }, {
